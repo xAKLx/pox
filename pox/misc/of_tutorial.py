@@ -55,6 +55,10 @@ class Tutorial (object):
     msg = of.ofp_packet_out()
     msg.data = packet_in
 
+    print 'resent packet'
+    print 'packeg_in ' + str(packet_in)
+    print 'out_port ' + str(out_port)
+
     # Add an action to send to the specified port
     action = of.ofp_action_output(port = out_port)
     msg.actions.append(action)
