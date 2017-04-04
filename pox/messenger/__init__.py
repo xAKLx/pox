@@ -223,6 +223,7 @@ class Connection (EventMixin):
     a newline.  Ultimately, it will be passed to send_raw() to actually
     be sent.
     """
+    print str(whatever)
     if self._is_connected is False: return False
     s = json.dumps(whatever, default=str)
     if self._newlines: s += "\n"
